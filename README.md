@@ -27,10 +27,10 @@ Feito para as tarefas repetitivas de preparação de modelos, como distribuir as
 
 ## Como usar
 
-Abra o `index.html` no navegador (duplo clique) ou sirva a pasta:
+Abra o `public/index.html` no navegador (duplo clique) ou sirva a pasta `public/`:
 
 ```bash
-npm start        # npx serve .
+npm start        # npx serve public
 ```
 
 Fluxo típico: **Abrir .inp…** → editar → **Baixar .inp** (o arquivo sai como `nome_editado.inp`).
@@ -40,15 +40,17 @@ Fluxo típico: **Abrir .inp…** → editar → **Baixar .inp** (o arquivo sai c
 ## Estrutura
 
 ```
-index.html          página única
-css/style.css       estilos (claro/escuro automático)
-js/core.js          parser/serializador, esquemas, formulários e ferramentas (sem DOM)
-js/app.js           interface
+public/             site estático (é a pasta publicada no Render)
+  index.html        página única
+  css/style.css     estilos (claro/escuro automático)
+  js/core.js        parser/serializador, esquemas, formulários e ferramentas (sem DOM)
+  js/app.js         interface
+  assets/           logo e favicon
 tests/              testes automatizados (node:test) e fixtures
 render.yaml         blueprint do Render (site estático)
 ```
 
-`js/core.js` não depende do DOM e funciona tanto no navegador (`window.Inp`) quanto no Node (`require`).
+`public/js/core.js` não depende do DOM e funciona tanto no navegador (`window.Inp`) quanto no Node (`require`).
 
 ## Testes
 
@@ -64,7 +66,7 @@ Cobrem o round-trip byte a byte dos modelos em `tests/fixtures/`, edição de c�
 
 1. Envie o repositório ao GitHub.
 2. No Render: **New → Static Site** e selecione o repositório.
-3. **Build Command**: vazio (ou `echo "sem build"`). **Publish Directory**: `.`
+3. **Build Command**: vazio (ou `echo "sem build"`). **Publish Directory**: `public`
 4. Alternativamente, use o `render.yaml` incluso (**New → Blueprint**).
 
 ## Limitações conhecidas

@@ -3,7 +3,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const Inp = require('../js/core.js');
+const Inp = require('../public/js/core.js');
 
 const FIX = path.join(__dirname, 'fixtures');
 const read = f => fs.readFileSync(path.join(FIX, f), 'latin1');

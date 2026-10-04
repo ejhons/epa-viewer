@@ -4,7 +4,7 @@ services:
     name: epa-viewer
     runtime: static
     buildCommand: echo "sem build"
-    staticPublishPath: .
+    staticPublishPath: public
     headers:
       - path: /*
         name: X-Content-Type-Options
