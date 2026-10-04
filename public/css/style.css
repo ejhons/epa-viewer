@@ -777,3 +777,35 @@ svg.chart .nd {
     flex-wrap: wrap;
   }
 }
+/* Celular/tablet estreito: a página rola inteira e o rodapé só aparece no fim */
+@media (max-width: 900px) {
+  html,
+  body {
+    height: auto;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .layout {
+    flex: 1 0 auto;
+  }
+
+  aside {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    max-height: 100vh;
+    max-height: 100dvh;
+  }
+
+  main {
+    overflow: visible;
+  }
+
+  .foot {
+    flex: none;
+  }
+}
