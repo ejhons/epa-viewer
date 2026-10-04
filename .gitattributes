@@ -1,0 +1,3 @@
+* text=auto
+# preserva os bytes (CRLF/LF) dos modelos usados nos testes de round-trip
+*.inp -text

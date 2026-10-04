@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.claude/
+
+# Modelos locais do usuário (podem ser privados). Os testes usam tests/fixtures/.
+input/
+*_editado*.inp
